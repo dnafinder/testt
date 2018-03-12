@@ -70,7 +70,9 @@ parse(p,x1,x2,varargin{:});
 x1=p.Results.x1; x2=p.Results.x2; tst=p.Results.tst; 
 alpha=p.Results.alpha; tail=p.Results.tail;
 clear p default* validation*
-
+if tst==1
+    assert(length(x1)==length(x2))
+end
 tr=repmat('-',1,80);
 
 switch tst
