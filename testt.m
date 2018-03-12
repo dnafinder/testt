@@ -13,11 +13,12 @@ function STATS=testt(x1,x2,varargin)
 %           ALPHA - significance level (default = 0.05).
 %           TAIL - 1-tailed test (1) or 2-tailed test (2). (default = 1).
 %     Outputs:
+%           - Fisher-Snedecor test (for unpaired test)
 %           - t value.
 %           - degrees of freedom.
 %           - Confidence interval of means difference (for paired test)
-%           - Critical value
 %           - p-value
+%           - Power
 % 
 %      Example: 
 % 
