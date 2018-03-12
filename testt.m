@@ -163,7 +163,6 @@ switch tail
             tb2=t + tinv(1-alpha/2,gl);
             Power=1 - (tcdf(tb2,gl)-tcdf(tb1,gl));
         end
-
 end
 TBL=table(t,gl,tail,alpha,p,Power);
 TBL.Properties.VariableNames = {'t' 'DF' 'tail' 'alpha' 'p_value' 'Power'};
