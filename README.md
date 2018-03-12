@@ -44,10 +44,10 @@ Variances are equal
  
 STUDENT'S T-TEST FOR UNPAIRED SAMPLES
  
-      t       DF    tail     p_value      Power 
-    ______    __    ____    _________    _______
+      t       DF    tail    alpha     p_value      Power 
+    ______    __    ____    _____    _________    _______
 
-    5.2411    48    1       1.765e-06    0.99958
+    5.2411    48    1       0.05     1.765e-06    0.99958
 
 STATS=TESTT(...) returns a structure with all test(s) statistics
 
