@@ -71,7 +71,7 @@ x1=p.Results.x1; x2=p.Results.x2; tst=p.Results.tst;
 alpha=p.Results.alpha; tail=p.Results.tail;
 clear p
 if tst==1
-    assert(length(x1)==length(x2))
+    assert(length(x1)==length(x2),'Warning: x1 and x2 must have the same length')
 end
 tr=repmat('-',1,80);
 
