@@ -67,8 +67,7 @@ addOptional(p,'tst',0, @(x) isnumeric(x) && isreal(x) && isfinite(x) && isscalar
 addOptional(p,'alpha',0.05, @(x) validateattributes(x,{'numeric'},{'scalar','real','finite','nonnan','>',0,'<',1}));
 addOptional(p,'tail',1, @(x) isnumeric(x) && isreal(x) && isfinite(x) && isscalar(x) && (x==1 || x==2));
 parse(p,x1,x2,varargin{:});
-x1=p.Results.x1; x2=p.Results.x2; tst=p.Results.tst; 
-alpha=p.Results.alpha; tail=p.Results.tail;
+tst=p.Results.tst; alpha=p.Results.alpha; tail=p.Results.tail;
 clear p
 if tst==1
     assert(length(x1)==length(x2),'Warning: x1 and x2 must have the same length')
