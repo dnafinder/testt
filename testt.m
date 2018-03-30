@@ -98,9 +98,7 @@ switch tst
         %display results
         disp('FISHER-SNEDECOR F-TEST FOR EQUALITY OF VARIANCES')
         disp(' ')
-        TBL=table(F,DF(1),DF(2),p);
-        TBL.Properties.VariableNames = {'F' 'DF_numerator' 'DF_denominator' 'p_value'};
-        disp(TBL)
+        disp(array2table([F DF(1) DF(2) p],'VariableNames',{'F' 'DF_numerator' 'DF_denominator' 'p_value'}));
         disp(tr)
         if p<alpha %unequal variances (Behrens-Welch problem)
             fprintf('Variances are different: Behrens-Welch problem\n')
@@ -163,9 +161,7 @@ switch tail
             Power=1 - (tcdf(tb2,gl)-tcdf(tb1,gl));
         end
 end
-TBL=table(t,gl,tail,alpha,p,Power);
-TBL.Properties.VariableNames = {'t' 'DF' 'tail' 'alpha' 'p_value' 'Power'};
-disp(TBL)
+disp(array2table([t gl tail alpha p Power],'VariableNames',{'t' 'DF' 'tail' 'alpha' 'p_value' 'Power'}))
 
 if nargout
     STATS.tvalue=t;
